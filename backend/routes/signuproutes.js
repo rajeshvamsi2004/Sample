@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
 
         res.json({
             success: true,
-            msg: `Welcome back, ${user.fullName}!`,
+            msg: `Signup Successful, ${user.fullName}!`,
             user: {
                 id: user.id,
                 username: user.username,
