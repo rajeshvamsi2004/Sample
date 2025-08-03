@@ -1,3 +1,4 @@
+// Filename: Login.jsx (No changes needed)
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -26,30 +27,29 @@ const Login = () => {
     setIsError(false);
 
     try {
-      const backendUrl = 'http://localhost:5000/api/login';
+      // This URL now points to your new, combined logic endpoint
+      const backendUrl = 'http://localhost:5000/api/login'; 
       const response = await axios.post(backendUrl, formData);
       
-      // We check for the 'success' flag from our stateless backend
+      // On first login, the backend sends success: true
       if (response.data.success) {
-        setMessage(response.data.msg);
+        setMessage(response.data.msg); // Will show "Welcome! Account created successfully!"
         setIsError(false);
         
-        // Redirect to a home/dashboard page after successful login
         setTimeout(() => {
           navigate('/home'); 
         }, 1500);
       }
       
     } catch (err) {
-      // The error response from the backend will have success: false
-      setMessage(err.response?.data?.msg || 'Login failed. Please try again.');
+      // On second login, the backend sends a 400 error, which is caught here.
+      // The message will be "User with this email/mobile already exists"
+      setMessage(err.response?.data?.msg || 'An error occurred. Please try again.');
       setIsError(true);
     }
   };
 
-
   return (
-    // ... The JSX for the form remains exactly the same
     <div className="page-container">
       <div className="main-container">
         <div className="login-box">
