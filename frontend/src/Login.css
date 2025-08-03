@@ -1,0 +1,130 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-container {
+  max-width: 350px;
+  width: 100%;
+}
+
+.login-box,
+.signup-prompt-box {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 20px 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-font {
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  font-weight: normal;
+  color: #262626;
+  margin: 22px auto 36px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 9px 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.login-form input::placeholder {
+  color: #8e8e8e;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+.login-btn {
+  background-color: #93b0f7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.or-text {
+  margin: 0 18px;
+  color: #8e8e8e;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.facebook-login {
+  background: none;
+  border: none;
+  color: #385185;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.facebook-login::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Facebook_icon_2013.svg');
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.forgot-password-link {
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.signup-prompt-box {
+  padding: 20px;
+}
+
+.signup-prompt-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #262626;
+}
+
+.signup-prompt-box a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
